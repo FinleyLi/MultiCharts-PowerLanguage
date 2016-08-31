@@ -1,0 +1,15 @@
+inputs: BollingerPrice(Close), TestPriceUBand(Close), TestPriceLBand(Close), Length(20), NumDevsUp(2), NumDevsDn(-2), Displace(0);
+vars: vMiddleBB(0), var1(0), vUpperBB(0), vLowerBB(0);
+vars: vPB(0), vBandWidth(0);
+
+vMiddleBB = AverageFC( BollingerPrice, Length ) ;
+var1 = StandardDev( BollingerPrice, Length, 1 ) ;
+vUpperBB = vMiddleBB + NumDevsUp * var1 ;
+vLowerBB = vMiddleBB + NumDevsDn * var1 ;
+
+
+vPB = (last - vLowerBB) / (vUpperBB - vLowerBB);
+vBandWidth = (vUpperBB - vLowerBB) / vMiddleBB;
+
+plot1(vPB , "%B");
+plot2(vBandWidth , "BandWidth");
