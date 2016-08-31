@@ -1,0 +1,455 @@
+
+目錄	函數名稱	說明
+A	AbsoluteBreadth	依上漲家數和下跌家數計算市場功能
+ 	AccumDist	進貨/出貨函數，分析資金流向，找出市場多空方向
+ 	AccumSwingIndex	計算累計的 SwingIndex 值
+ 	AdaptiveMovAvg	計算最佳移動平均
+ 	AdvanceDeclineDiff	累計的上漲家數和下跌家數之和
+ 	AdvanceDeclineRatio	上漲家數和下跌家數的比率
+ 	ADX	平均動向指數
+ 	ADXClassic	原始的平均動向指數定義公式
+ 	ADXCustom	和 ADX 相同，但可自訂計算DMI的數列
+ 	ADXCustomClassic	和 ADXClassic 相同，但可自訂計算 DMI 的數列
+ 	ADXR	平均動向指數評估
+ 	ADXRClassic	原始的平均動向指數評估定義公式
+ 	ADXRCustom	和 ADXR 相同，但可自訂計算DMI的數列
+ 	ADXRCustomClassic	和 ADXRClassic 相同，但可自訂計算DMI的數列
+ 	ArmsIndex	阿姆斯指數，漲跌家數和漲跌量的比率
+ 	Average	計算數列的簡單移動平均
+ 	Average_a	計算陣列的簡單移動平均
+ 	AverageArray	計算陣列的簡單移動平均
+ 	AverageDnMove	平均下跌幅度
+ 	AverageFC	快速計算的簡單移動平均
+ 	AverageUpMove	平均上漲幅度
+ 	AvgDeviation	計算數列的平均絕對偏差
+ 	AvgDeviation_a	計算陣列的平均絕對偏差
+ 	AvgDeviationArray	計算陣列的平均絕對偏差
+ 	AvgPrice	計算K棒開高低收的均價
+ 	AvgTrueRange	平均真實波幅
+　	　	　
+B	BarAnnualization	取得目前週期的年化因數
+ 	BarNumber	目前K棒的編號
+ 	BarQuality	有效K棒占總K棒的百分比
+ 	BearishDivergence	熊市背離
+ 	BearishEngulfing	空頭吞噬
+ 	BjerkStenCall	以 Bjerksund & Stensland 模型計算美式買權的理論價
+ 	BjerkStenPhi	BjerkStenCall 的子函數
+ 	BlackModel	以 Black 模型計算歐式期貨選擇權理論價
+ 	BlackScholes	以 Black-Scholes 模式計算歐式選擇權理論價
+ 	BollingBand	計算布林格通道價格
+ 	BullishDivergence	牛市背離
+ 	BullishEngulfing	多頭吞噬
+ 	BussinessDays	計算有多少個營業日
+　	　	　
+C	C_3WhSolds_3BlkCrows	三白兵或三烏鴉
+ 	C_BullEng_BearEng	多頭吞噬或空頭吞噬
+ 	C_BullHar_BearHar	多頭母子或空頭母子
+ 	C_Doji	十字線
+ 	C_Hammer_HangingMan	錘子或吊人
+ 	C_MornDoji_EveDoji	晨星十字或夜星十字
+ 	C_PierceLine_DkCloud	曙光初現或烏雲罩頂
+ 	C_ShootingStar	流星
+ 	CalcDate	以參考日期計算新的日期
+ 	CalcTime	以參考時間計算新的 HHMM 時間
+ 	CalcTime_s	以參考時間計算新的 HHMMSS 時間
+ 	CCI	順勢指標
+ 	CCIClassic	原始的順勢指標定義公式
+ 	ChaikinOsc	蔡金擺動指標
+ 	CloseD	日線收盤價
+ 	CloseM	月線收盤價
+ 	CloseW	周線收盤價
+ 	CloseY	年線收盤價
+ 	CoefficientR	計算數列的相關係數
+ 	CoefficientRArray	計算陣列的相關係數
+ 	CoefficientREasy	計算數列的相關係數（只用一個數列）
+ 	coefR	計算收盤價數列的相關係數
+ 	coefR_a	計算陣列的相關係數
+ 	Combination	計算組合的個數
+ 	CopyColumn	複製二維陣列中的元素
+ 	Correlation	計算二個數列的相關性
+ 	Correlation_a	計算二個陣列的相關性
+ 	CorrelationArray	計算二個陣列的相關性
+ 	CounterTrendStocks	 
+ 	CountIf	計算符合條件的次數
+ 	Covar	計算兩個數列的共變數
+ 	CovarArray	計算兩個陣列的共變數
+ 	CovarEasy	計算數列的共變數（只用一個數列）
+ 	Covariance	計算二個數列的共變異數
+ 	Covariance_a	計算二個陣列的共變異數
+ 	CSI	股票選擇指標
+ 	CSIClassic	原始的股票選擇指標定義公式
+ 	Cum	累加指定數列
+ 	CurrentAsk	即時賣價
+ 	CurrentBid	即時買價
+ 	CurrentSession	目前交易時段
+ 	CurrentSessionMS	目前合併的交易時段
+　	　	　
+D	DailyLosers	指定日期的虧損交易次數
+ 	DailyWinners	指定日期的獲利交易次數
+ 	DarkCloud	烏雲罩頂
+ 	DaysOfWeekFix	星期幾
+ 	DaysToExpiration	計算股票選擇權的到期天數
+ 	Delta	計算選擇權的 Delta
+ 	Detrend	區間震盪指標
+ 	DevSqrd	計算數列離差的平方和
+ 	DevSqrd_a	計算陣列離差的平方和
+ 	DevSqrdArray	計算陣列離差的平方和
+ 	DirMovement	計算 Welles Wilder 的動向指標
+ 	Divergence	計算是否出現背離現象
+ 	DMI	動向指標
+ 	DMICustom	和 DMI 相同，但可自訂計算 DMI 的數列
+ 	DMIMinus	 ‐DI
+ 	DMIMinusCustom	和 ‐DI 相同，但可自訂計算的數列
+ 	DMIPlus	 +DI
+ 	DMIPlusCustom	和 +DI 相同，但可自訂計算的數列
+ 	Doji	十字線
+　	　	　
+E	EaseOfMovrment	簡易波動指標
+ 	ELDate	轉換成 YYYMMDD 的日期
+ 	ELDate_Consol	將 YYYYMMDD 日期轉換成 YYYMMDD 日期
+ 	ELDateToString	將 YYYMMDD 轉換成 MM/DD/YYYY 的字串
+ 	EntireHigh	傳回波段的最高收盤價
+ 	EntireToday	指定日期的進場次數
+ 	EveningStar	晨星
+ 	ExitsToday	指定日期的出場次數
+ 	ExtremePrice	區間端點最高價/區間端點最低價
+ 	ExtremePriceRatio	區間最高價/區間最低價
+ 	Extremes	計算出現數列極值的價格和K棒編號
+ 	ExtremesArray	計算出現陣列極值的價格和K棒編號
+ 	ExtremesFC	快速計算出現數列極值的價格和K棒編號
+　	　	　
+F	Factorial	階乘
+ 	FastD	隨機指標的 FastD
+ 	FastDClassic	原始的隨機指標 FastD 定義公式
+ 	FastDCustom	和 FastD 相同，但可自訂計算的數列
+ 	FastDCustomOrig	和 FastDClassic 相同，但可自訂計算的數列
+ 	FastHighestBar	快速計算數列最高價的 K 棒位置
+ 	FastK	隨機指標的 FastK
+ 	FastKCustom	和 FastK 相同，但可自訂計算的數列
+ 	FastKCustomEasy	僅用一個數列計算 FastK
+ 	FastKCustomOrig	原始的隨機指標 FastK 定義公式，但可自訂計算的數列
+ 	FastLowestBar	快速計算數列最低價的 K 棒位置
+ 	FindBar	找出指定日期時間的 K 棒位置
+ 	FirstofMonthJul	當月月初的儒略日
+ 	FirstofNextMonthJul	次月月初的儒略日
+ 	FirstofPrevMonthJul	前月月初的儒略日
+ 	FirstSession	星期幾第一個交易時段的編號
+ 	FirstSessiomMS	星期幾第一個合併交易時段的編號
+ 	Fisher	將相關係數做費雪轉換
+ 	FisherINV	反轉費雪轉換
+　	　	　
+G	Gamma	計算選擇權的 Gamma
+ 	GCD	最大公因數
+ 	GenerateStrike	計算指定間距的選擇權履約價
+ 	GetRGBValues	從 RGB 色碼取得三原色
+　	　	　
+H	Hammer	錘子
+ 	HangingMan	吊人
+ 	HarmonicMean	計算數列的調和平均數
+ 	HarmonicMean_a	計算陣列的調和平均數
+ 	HarmonicMeanArray	計算陣列的調和平均數
+ 	HeapPush	HeapSift 的子函數，用於一維陣列的堆積排序法
+ 	HeapPush2D	HeapSift2D 的子函數，用於二維陣列的堆積排序法
+ 	HeapSift	SortHeapArray 的子函數，用於一維陣列的堆積排序法
+ 	HeapSift2D	SortHeap2DArray 的子函數，用於二維陣列的堆積排序法
+ 	HighD	日線最高價
+ 	HighDGen	數列 N 的日線最高價
+ 	Highest	取得數列的區間最高價
+ 	Highest_a	取得陣列的區間最高價
+ 	HighestArray	取得陣列的區間最高價
+ 	HighestBar	取得數列最高價的 K 棒位置
+ 	HighestFC	快速計算數列的區間最高價
+ 	HighM	月線最高價
+ 	HighW	周線最高價
+ 	HighY	年線最高價
+ 	HPI	海利克精指數
+　	　	　
+I	IFF	IF 的函數
+ 	IFFLogic	IF 的函數，傳回值為布林值
+ 	IffString	IF 的函數，傳回值為字串
+ 	ImpliedVolatility	計算選擇權的隱含波動率
+ 	Intrisic	計算選擇權的內含價值
+ 	IsWorkDay	是否為營業日（週一至週五）
+　	　	　
+K	KeltnerChannel	肯特納通道
+ 	Kurtosis	計算數列的峰度
+ 	Kurtosis_a	計算陣列的峰度
+ 	KurtosisArray	計算陣列的峰度
+ 	KurtosisOpt	計算數列的峰度
+　	　	　
+L	LastBarOnChart	是否為走勢圖上最後一根 K 棒
+ 	LastBarOnChart_s	是否為走勢圖上最後一根 K 棒，用在分線一下的週期
+ 	LastCalcDate	最後一根完成 K 棒的日期
+ 	LastCalcTime	最後一根完成 K 棒的時間（HHMM)
+ 	LastCalcTime_s	最後一根完成 K 棒的時間（HHMMSS)
+ 	LastDayOfMonth	傳回指定月份的最後一天（不考慮瑞年）
+ 	LastHour	目前 K 棒時間是否為交易時段的最後一小時
+ 	LastSession	傳回指定日期最後一個交易時段的編號
+ 	LastSessionMS	傳回指定日期最後一個合併交易時段的編號
+ 	Leader	判斷 K 棒的中點是否高於昨高或低於昨低
+ 	LinearReg	計算數列回歸線的斜率、角度及回歸值
+ 	LinearRegAngle	計算數列回歸線的角度
+ 	LinearRegAngleFC	快速計算數列回歸線的角度
+ 	LinearRegFC	快速計算數列回歸線的斜率、角度及回歸值
+ 	LinearRegLine	繪製回歸線
+ 	LinearRegSlope	計算數列回歸線的斜率
+ 	LinearRegSlopeFC	快速計算數列回歸線的斜率
+ 	LinearRegValue	計算數列回歸線的回歸值
+ 	LinearRegValueFC	快速計算數列回歸線的回歸值
+ 	LinRegAngleArray	計算陣列回歸線的角度
+ 	LinRegAngleArray2	利用最小平方法計算陣列回歸線的角度
+ 	LinRegArray	計算陣列回歸線的斜率、角度及回歸值
+ 	LinRegArray2	利用最小平方法計算陣列回歸線的斜率、角度及回傳值
+ 	LinRegForecast_a	計算陣列回歸線的回歸值
+ 	LinRegForecastArray	計算陣列回歸線的回歸值
+ 	LinRegForecastArray2	利用最小平方法計算陣列回歸線的回歸值
+ 	LinRegInterceptArray2	利用最小平方法計算陣列回歸線在價格軸的截距
+ 	LinRegIntercept_a	計算陣列回歸線在價格軸的截距
+ 	LinRegInterceptArray	計算陣列回歸線在價格軸的截距
+ 	LinRegSlope_a	計算陣列回歸線的斜率
+ 	LinRegSlopeArray	計算陣列回歸線的斜率
+ 	LinRegSlopeArray2	利用最小平方法計算陣列回歸線的斜率
+ 	LowD	日線最低價
+ 	LowDGen	數列 N 的日線最低價
+ 	Lowest	數列區間最低價
+ 	Lowest_a	陣列最低價
+ 	LowestArray	陣列最低價
+ 	LowestBar	數列區間最低價的位置
+ 	LowestFC	快速計算數列區間最低價
+ 	LowM	月線最低價
+ 	LowW	周線最低價
+ 	LowY	年線最低價
+ 	LRO	指定區間內，條件最先成立的位置
+ 	LWAccDis	Larry Williams 版本的進貨/出貨函數
+　	　	　
+M	MACD	計算快速移動平均和慢速移動平均的差值
+ 	MassIndex	重量指數
+ 	McClellanOsc	McClellan 市場廣度指標
+ 	Median	計算數列的中位數
+ 	Median_a	計算陣列的中位數
+ 	MedianArray	計算陣列的中位數
+ 	MedianPrice	計算 K 棒中價
+ 	MFI	K 棒區間除以成交量
+ 	MidPoint	傳回數列在指定區間內的中價
+ 	MinutesIntoWeek	將時間以每週的第幾分鐘表示
+ 	MinutesToTime	將分鐘表示的時間轉換成 HHMM 的格式
+ 	Mode	傳回數列在指定區間最出現最多的值
+ 	Mode_a	傳回陣列在指定區間最出現最多的值
+ 	ModeArray	傳回陣列在指定區間最出現最多的值
+ 	Momentum	計算數列在區間內的變動
+ 	MoneyFlow	資金流量指標
+ 	MRO	指定區間內，條件最近成立的位置
+ 	MyPrice	K 棒高、低、收的平均價
+　	　	　
+N	Next3rdFirday	計算到下次每月第三個週五的天數
+ 	NormalCumDensity	指定價格、平均數及標準差，計算常態累積分配
+ 	NormalCumDensity_a	指定價格及陣列，計算常態累積分配
+ 	NormalDensity	指定價格、平均數及標準差，計算常態機率密度
+ 	NormalDensity_a	指定價格及陣列，計算常態機率密度
+ 	NormalSCDensity	由價格計算標準常態累積分配
+ 	NormCumDensity	計算數列的常態累積分配
+ 	NormCumDensityArray	計算陣列的常態累積分配
+ 	NormDensity	計算數列的常態機率密度
+ 	NormDensityArray	計算陣列的常態機率密度
+ 	NormGradientColor	利用常態分配取得漸增色彩
+ 	NormSCDensity	由價格計算標準常態累積分配
+ 	NthDayofMonth	由指定日期起算，第幾個星期幾
+ 	NthEtremes	取得指定區間內的第 N 個最高值或最低值
+ 	NthEtremesArray	取得陣列的第 N 個最高值或最低值
+ 	NthHighest	取得數列區間內的第 N 個最高值
+ 	NthHighest_a	取得陣列的第 N 個最高值
+ 	NthHighestArray	取得陣列的第 N 個最高值
+ 	NthHighestBar	取得數列區間內第 N 個最高值的位置
+ 	NthLowest	取得數列區間內第 N 個最低值
+ 	NthLowest_a	取得陣列的第 N 個最低值
+ 	NthLowestArray	取得陣列的第 N 個最低值
+ 	NthLowestBar	取得數列區間內第 N 個最高低的位置
+ 	NumericRank	計算價格在數列內的排序位置
+ 	NumericRankArray	計算價格在陣列內的排序位置
+ 	NumUnits	依資金及交易單位取得可交易的單位數
+　	　	　
+O	OBV	計算 OBV 指標
+ 	OHLCPeriodsAgo	取得過去 K 棒的開高低收價
+ 	OHLCPeriodsAgoGen	取得數列 N 過去 K 棒的開高低收價
+ 	OneAlert	在條件符合時，每根 K 棒只送出一次警示
+ 	OpenD	日線開盤價
+ 	OpenM	月線開盤價
+ 	OpenW	周線開盤價
+ 	OpenY	年線開盤價
+ 	OptionPrice	計算選擇權理論價（會依輸入參數自動決定計算模型）
+ 	OptionsComplex	利用 BlackScholes 模型計算選擇權理論價及希臘字母
+ 	OS_Intrinsic	計算選擇權的內含價值
+ 	Outside	子母線
+　	　	　
+P	Parabolic	SAR
+ 	ParabolicCustom	和 SAR 相同，但可自訂計算的數列
+ 	ParabolicSAR	傳回當根及次根 K 棒的 SAR 參考價
+ 	PartSessionCountDay	傳回當天沒有同時具有開盤和收盤的交易時段
+ 	Pennant	三角收斂
+ 	PercentChange	價格變動率
+ 	Percentile	計算數列的百分位數
+ 	Percentile_a	計算陣列的百分位數
+ 	PercentileArray	計算陣列的百分位數
+ 	PercentR	威廉指標
+ 	PercentRank	計算價格在數列中的百分等級
+ 	PercentRank_a	計算價格在陣列中的百分等級
+ 	PercentRankArray	計算價格在陣列中的百分等級
+ 	Permutation	計算排列的個數
+ 	Pivot	計算最近的反轉點的價格 K 棒位置
+ 	PivotHighVS	計算最近的反轉高點的價格
+ 	PivotHighVSBar	計算最近的反轉高點的 K 棒位置
+ 	PivotLowVS	計算最近的反轉低點的價格
+ 	PivotLowVSBar	計算最近的反轉低點的 K 棒位置
+ 	PivotReversalGen	傳回最近突破的高點或低點的價格及強度
+ 	PositionProfitCustom	依指定價格數列計算部位損益
+ 	PriceOscillator	計算快速移動平均及慢速移動平均的差距
+ 	PriceVolTrend	價量趨勢指標
+ 	ProbAbove	依波動率計算未來價格會大於等於特定價位的機率
+ 	ProbBelow	依波動率計算未來價格會小於等於特定價位的機率
+ 	ProbBetween	依波動率計算未來價格會特定價格區間內的機率
+　	　	　
+Q	QualityBar	有效的 K 棒
+ 	Quartile	計算數列的四分位數
+ 	Quartile_a	計算陣列的四分位數
+ 	QuartileArray	計算陣列的四分位數
+　	　	　
+R	Range	計算 K 棒的高低價差
+ 	RangeLeader	判斷 K 棒的中點是否高於昨高或低於昨低且 K 棒高低價差變大
+ 	Rank	取得數列中指定排名的數值
+ 	Rank_a	取得陣列中指定排名的數值
+ 	RateOfChange	價格變動率（單位為百分點）
+ 	RecentOcc	MRO 和 LRO 的子函數
+ 	Rho	計算選擇權的 Rho
+ 	Ring	前六根 K 棒內出現一個轉折低點，且目前 K 棒低於前一根 K 棒
+ 	Round2Fraction	四捨五入到最小的價格刻度
+ 	RS_Average	在日內週期取得日線資料資料的平均值
+ 	RS_BarsPerDay	每日 K 棒數量
+ 	RS_DailyDataArray	在日內週期取得日線資料資料的供其他 RS 函數使用
+ 	RS_Extremes	在日內週期取得日線資料資料的極值
+ 	RS_PriceExtension	日線延伸的方向
+ 	RS_ReversalPatterns	找出日線反轉類型
+ 	RS_TrueExtremes	從 RS_DailyDataArray 的陣列中整理出最高價、最低價及平均真實波幅
+ 	RSI	RSI 指標
+ 	RSIClassic	原始的 RSI 定義公式
+ 	RSquare	計算數列 R Square
+ 	RSquareArray	計算陣列 R Square
+ 	RSquared	計算收盤價的 R Square
+ 	Rsquared_a	計算陣列 R Square
+　	　	　
+S	SecondsToTime	將 HHMM 轉換成以秒數表示
+ 	SecondsToTime_s	將 HHMMSS 轉換成以秒數表示
+ 	SerFunc	遞增值（每次呼叫就自動加 1 後回傳）
+ 	SerialHighsLows	創新高新低的 K 棒比率
+ 	SessionCountDay	傳回指定星期幾所含完整交易時段的數量
+ 	SessionFirstBarTime	傳回指定交易時段的第一根 K 棒時間
+ 	ShootingBar	晨星
+ 	ShowLongStop	在圖表上顯示多單停損的文字
+ 	ShowShortStop	在圖表上顯示空單停損的文字
+ 	Skew	傳回一個數列分配的偏態
+ 	Skew_a	傳回一個陣列分配的偏態
+ 	SkewArray	傳回一個陣列分配的偏態
+ 	SkewOpt	數列的最佳偏態
+ 	SlowD	隨機指標的 SlowD
+ 	SlowDClassic	原始的隨機指標 SlowD 定義公式
+ 	SlowDCustom	和 SlowD 相同，但可自訂計算的數列
+ 	SlowDCustomOrig	原始的隨機指標 SlowD 定義公式，但可自訂計算的數列
+ 	SlowK	隨機指標的 SlowK
+ 	SlowKClassic	原始的隨機指標 SlowK 定義公式
+ 	SlowKCustom	和 SlowK 相同，但可自訂計算的數列
+ 	SlowKCustomOrig	原始的隨機指標 SlowK 定義公式，但可自訂計算的數列
+ 	SmoothedAverage	平滑簡單移動平均
+ 	SnapFundValid	 
+ 	Sort2DArray	排序二維陣列
+ 	SortArray	排序一維陣列
+ 	SortDown_a	遞減排序一維陣列
+ 	SortHeap2DArray	以堆積排序法排序二維陣列
+ 	SortHeapArray	以堆積排序法排序一維陣列
+ 	SortUp_a	遞增排序一維陣列
+ 	StandardDev	計算數列的標準差
+ 	StandardDevAnnual	計算數列的年化標準差
+ 	StandardDevArray	計算陣列的標準差
+ 	StandardError	計算數列的標準誤
+ 	StandardError_a	計算陣列的標準誤
+ 	Standardize	傳回數列標準化常態分配的值
+ 	Standardize_a	傳回陣列標準化常態分配的值
+ 	StandardizeArray	傳回陣列標準化常態分配的值
+ 	StdDev	計算數列的母體標準差
+ 	StdDevP_a	計算陣列的母體標準差
+ 	StdDevPAnnualized	計算數列的年化母體標準差
+ 	StdDevS	計算數列的樣本標準差
+ 	StdDevS_a	計算陣列的樣本標準差
+ 	StdDevSAnnualized	計算數列的年化樣本標準差
+ 	StdError	計算數列的標準誤
+ 	StdErrorArray	計算一維陣列的標準誤
+ 	StdErrorArray2	計算二維陣列的標準誤
+ 	Stochastic	隨機指標（FastK、FastD、SlowK、SlowD）
+ 	StochasticExp	以指數移動平均方式計算隨機指標（FastD、SlowD)
+ 	StrColorToNum	將代表顏色的字串轉換對應的數值
+ 	Summation	計算數列的總和
+ 	Summation_a	計算陣列的總和
+ 	SummationArray	計算陣列的總和
+ 	SummationFC	快速計算數列的總和
+ 	SummationIf	計算數列符合特定條件的總和
+ 	SummationRecArray	計算陣列的倒數總和
+ 	SummationSqrArray	計算陣列的平方總和
+ 	SwingHigh	找出數列的轉折高價
+ 	SwingHighBar	找出數列的轉折高點 K 棒位置
+ 	SwingIndex	利用 +100 到 -100 的數值表示市場的方向及強弱
+ 	SwingLow	找出數列的轉折低價
+ 	SwingLowBar	找出數列的轉折低點 K 棒位置
+　	　	　
+T	TDirec	 
+ 	Text_Exist	檢查指定的文字物件是否存在
+ 	Text_Float	將文字物件固定在書面上的固定位置
+ 	Theta	計算選擇權的 Theta
+ 	TimeSeriesForecast	計算回歸線的投影值
+ 	TimeToMinutes	將 HHMM 的時間轉成以分鐘表示
+ 	TimeToSeconds	將 HHMMSS 的時間轉成以秒表示
+ 	TL_Exist	檢查指定的趨勢線物件是否存在
+ 	TLAngle	計算趨勢線的角度
+ 	TLAngleEasy	計算趨勢顯得角度（僅能指定一個數列）
+ 	TLSlope	計算趨勢線的斜率
+ 	TLSlopeEasy	計算趨勢線的斜率（僅能指定一個數列）
+ 	TLValue	計算趨勢線的對應價格
+ 	TLValueEasy	計算趨勢線的對應價格（僅能指定一個數列）
+ 	TrendingStocks	 
+ 	TriAverage	三角移動平均（中央權重較重）
+ 	TriAverage_Gen	三角移動平均（中央權重較重）和 TriAverage 的權重稍有不同
+ 	TrimMean	計算數列去除部分極值後的平均數
+ 	TrimMean_a	計算陣列去除部分極值後的平均數
+ 	TrimMeanArray	計算陣列去除部分極值後的平均數
+ 	TRIX	三重指數平滑移動平均
+ 	TrueHigh	真實高點
+ 	TrueLow	真實低點
+ 	TrueRange	真實波幅
+ 	TrueRangeCustom	和 TrueRange 相同，但可自訂計算的數列
+ 	TypicalPrice	和 AvgPrice 類似，為高、低、收的平均價
+　	　	　
+U	UlcerIndex	潰瘍指數，衡量商品拉回的壓力程度
+ 	UltimateOsc	終極擺蕩指標
+ 	UltimateOscillator	終極擺蕩指標（原始公式）
+　	　	　
+V	Variance	計算數列的樣本變異數
+ 	VarianceArray	計算陣列的變異數
+ 	VarianceP	計算數列的母體變異數
+ 	VarianceP_a	計算陣列的母體變異數
+ 	VariancePS	計算數列的變異數
+ 	VarianceS_a	計算陣列的樣本變異數
+ 	Vega	計算選擇權的 Vega
+ 	Volatility	TrueRange 的指數移動平均
+ 	VolatilityClassic	TrueRange 的簡單移動平均
+ 	VolatilityExVal	 
+ 	VolatilityStdDev	計算商品的歷史波動率（只能用於日線）
+ 	VolatilityStocks	 
+ 	VolumeOsc	計算成交量的快速移動平均及慢速移動平均差距
+ 	VolumeROC	成交量變動率
+ 	vwapResttable	時段分割的成交量加權平均
+　	　	　
+W	WAverage	計算數列的加權移動平均
+ 	WeightedClose	和 TypicalPrice 類似，但收盤價較高權重
+　	　	　
+X	XAverage	計算數列的指數移動平均，權重為 2/（Len+1）
+ 	XAverageOrig	計算數列的指數移動平均，權重為 1/Len
+　	　	　
+Z	Zprob	變尾 Z 檢定的 P-value
+ 	Ztest	標準常態分配下變尾 Z 檢定的 P-value
