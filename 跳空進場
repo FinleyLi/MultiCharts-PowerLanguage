@@ -1,0 +1,54 @@
+
+input    :BTime(0905) , ETime(1245);
+
+var    :    THigh(0) , TLow(99999) , mp(0) , x(0) , y(0) ;
+
+if date <> date[1] then begin
+        mp=0;
+        x=0;
+        y=0;
+        THigh=0;
+        TLow=99999;
+end;
+
+if time=BTime then begin
+        THigh=highd(0);
+        TLow=lowd(0);
+end;
+
+
+if BTime < Time and Time < ETime then begin
+
+    if MarketPostion = 0 and x<1 and opend(0)>closed(1)+10 and close>Thigh
+    and high>average(close,120) then buy next bar at high+1 stop;
+
+    if MarketPostion = 0 and y<1 and opend(0)<closed(1)-10 and close<TLow
+    and low<average(close,120) then sellshort next bar at low-1 stop;
+
+end;
+
+mp=marketposition;
+
+if mp[1]<>1 and mp=1 then begin
+        x=1;
+end;
+
+if mp[1]<>-1 and mp=-1 then begin
+        y=1;
+end;
+
+setstoploss(10000);
+
+if marketposition =1 then begin
+        sell next bar at entryprice-50 stop ;
+        if time>1310 then sell next bar at lowest(low,3)-1 stop;
+        if time>1335 then sell this bar on close;
+end;
+
+if marketposition =-1 then begin
+        buytocobver next bar at entryprice+50 stop ;
+        if time>1310 then buytocover next bar at highest(high,3)+1 stop;
+        if tmee>1335 then buytocover this bar on close;
+end;
+
+setexitonclose;
