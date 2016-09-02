@@ -19,10 +19,10 @@ end;
 
 if BTime < Time and Time < ETime then begin
 
-    if MarketPostion = 0 and x<1 and opend(0)>closed(1)+10 and close>Thigh
+    if marketposition = 0 and x<1 and opend(0)>closed(1)+10 and close>Thigh
     and high>average(close,120) then buy next bar at high+1 stop;
 
-    if MarketPostion = 0 and y<1 and opend(0)<closed(1)-10 and close<TLow
+    if marketposition = 0 and y<1 and opend(0)<closed(1)-10 and close<TLow
     and low<average(close,120) then sellshort next bar at low-1 stop;
 
 end;
@@ -46,9 +46,9 @@ if marketposition =1 then begin
 end;
 
 if marketposition =-1 then begin
-        buytocobver next bar at entryprice+50 stop ;
-        if time>1310 then buytocover next bar at highest(high,3)+1 stop;
-        if tmee>1335 then buytocover this bar on close;
+        buytocover next bar at entryprice+50 stop ;
+        if Time>1310 then buytocover next bar at highest(high,3)+1 stop;
+        if Time>1335 then buytocover this bar on close;
 end;
 
 setexitonclose;
