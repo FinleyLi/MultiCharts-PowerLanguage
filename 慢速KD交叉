@@ -1,0 +1,21 @@
+inputs: Price(close), Len_Short(9), Len_Long(10);
+vars: var1(0), var2(0);
+
+var1= SlowK(Len_Short);
+var2= SlowD(Len_long);
+
+if marketposition= 0 and var1 Crosses Above var2 then begin
+buy("buy") next bar at market;
+end;
+
+if marketposition= 0 and var1 Crosses Under var2 then begin
+sellshort("sell") next bar at market;
+end;
+
+if marketposition>0 and var1 Crosses Under var2 then begin
+sell("EXIT_buy") next bar at market;
+end;
+
+if marketposition<0 and var1 Crosses Above var2 then begin
+buytocover("EXIT_sell") next bar at market;
+end;
