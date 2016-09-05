@@ -1,15 +1,33 @@
-inputs: BollingerPrice(Close), TestPriceUBand(Close), TestPriceLBand(Close), Length(20), NumDevsUp(2), NumDevsDn(-2), Displace(0);
-vars: vMiddleBB(0), var1(0), vUpperBB(0), vLowerBB(0);
-vars: vPB(0), vBandWidth(0);
+{BandWidth}
+{input:BarNo(20),Sueeze(300),StdMulti(4) ;
+Vars: BandWidth(0) ;
+BandWidth = StdDev(Close,BarNo)*StdMulti ;
+plot1(BandWidth,"BandWidth") ;
+plot2(Sueeze,"Sqeeze") ;}
+{ % BBand }
+{input:{BarNo(60),}HB(1),MB(0.5),LB(0) ;
+Value1 = StdDev(Close,20) ;
+Value2 = (Close-(Average(Close,20)-2*Value1))/(Value1*4) ;
 
-vMiddleBB = AverageFC( BollingerPrice, Length ) ;
-var1 = StandardDev( BollingerPrice, Length, 1 ) ;
-vUpperBB = vMiddleBB + NumDevsUp * var1 ;
-vLowerBB = vMiddleBB + NumDevsDn * var1 ;
+Plot1(Value2,"%B") ;
+Plot2(HB,"HB") ;
+Plot3(MB,"MB") ;
+Plot4(LB,"LB") ;}
 
+input: Length(20), NumDevsUp(2), NumDevsDn(-2);
+vars: var0(0), var1(0), var2(0), var3(0);
 
-vPB = (last - vLowerBB) / (vUpperBB - vLowerBB);
-vBandWidth = (vUpperBB - vLowerBB) / vMiddleBB;
+var0 = AverageFC(c, Length);
+var1 = StandardDev(c, Length, 1);
+var3 = var0 + NumDevsUp*var1;
+var2 = var0 + NumDevsDn*var1;
 
-plot1(vPB , "%B");
-plot2(vBandWidth , "BandWidth");
+if var3 - var2 > 0 then begin
+value1 = ((close - var2)/(var3 - var2))*100;
+
+end;
+
+plot1(value1);
+plot2(100);
+plot3(0);
+plot4(50);
