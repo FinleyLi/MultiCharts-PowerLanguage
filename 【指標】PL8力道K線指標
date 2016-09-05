@@ -1,0 +1,30 @@
+input:len(60);
+{
+Var:MA1(0),MA2(0),XHigh(0),XLow(0),Diff(0);
+MA1=xaverage(xaverage(c,len/6),len/6/5);
+MA2=xaverage(xaverage(c,len),len/5);
+XHigh=absvalue((MA1-MA2)/5)+MA1;
+XLow=MA1-absvalue((MA1-MA2)/5);
+if MA1>MA2 then
+Diff=XHigh-Xlow;
+if MA1<MA2 then
+Diff=Xlow-XHigh;
+plot1(MA1,"MA1",red);
+Plot2(MA2,"MA2",green);
+plot3(XHigh,"XHigh");
+plot4(Xlow,"Xlow");
+if MA1>MA2 thensetplotcolor(1,red) else setplotcolor(1,green);
+if MA1>MA2 thensetplotcolor(3,red) else setplotcolor(3,green);
+if MA1>MA2 thensetplotcolor(4,red) else setplotcolor(4,green);
+}
+Var:MA1(0),MA2(0),XHigh(0),XLow(0),Diff(0);
+MA1=xaverage(xaverage(c,10),2);
+MA2=xaverage(xaverage(c,60),12);
+XHigh=absvalue((MA1-MA2)/5)+MA1;
+XLow=MA1-absvalue((MA1-MA2)/5);
+if MA1>MA2 then
+Diff=XHigh-Xlow;
+if MA1<MA2 then
+Diff=Xlow-XHigh;
+plot1(Diff,"Diff");
+if MA1>MA2 then setplotcolor(1,red) else setplotcolor(1,green);
