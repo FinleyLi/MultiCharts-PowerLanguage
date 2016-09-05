@@ -1,0 +1,158 @@
+{http://wenschair.blogspot.tw/2013/10/by-easytrader.html}
+
+Input: Ratio(0.3) ;
+
+vars: V_sum(0),V_est(0),TodayVol(0),YesterDayVol(0);
+
+if date <> date[1] then begin
+
+        YesterDayVol = TodayVol[1] ;
+
+    V_sum = ticks;
+
+end
+
+else begin
+
+   V_sum = V_sum + ticks;
+
+end;
+
+if time<=0850 then V_est = V_sum * 28.90
+
+else if Time >0850 and time <= 0855 then V_est = V_sum * 18.67
+
+else if Time >0855 and time <= 0900 then V_est = V_sum * 14.29
+
+else if Time >0900 and time <= 0905 then V_est = V_sum * 9.54
+
+else if Time >0905 and time <= 0910 then V_est = V_sum * 7.20
+
+else if Time >0910 and time <= 0915 then V_est = V_sum * 6.11
+
+else if Time >0915 and time <= 0920 then V_est = V_sum * 5.25
+
+else if Time >0920 and time <= 0925 then V_est = V_sum * 4.73
+
+else if Time >0925 and time <= 0930 then V_est = V_sum * 4.27
+
+else if Time >0930 and time <= 0935 then V_est = V_sum * 3.88
+
+else if Time >0935 and time <= 0940 then V_est = V_sum * 3.60
+
+else if Time >0940 and time <= 0945 then V_est = V_sum * 3.33
+
+else if Time >0945 and time <= 0950 then V_est = V_sum * 3.12
+
+else if Time >0950 and time <= 0955 then V_est = V_sum * 2.95
+
+else if Time >0955 and time <= 1000 then V_est = V_sum * 2.80
+
+else if Time >1000 and time <= 1005 then V_est = V_sum * 2.65
+
+else if Time >1005 and time <= 1010 then V_est = V_sum * 2.53
+
+else if Time >1010 and time <= 1015 then V_est = V_sum * 2.42
+
+else if Time >1015 and time <= 1020 then V_est = V_sum * 2.32
+
+else if Time >1020 and time <= 1025 then V_est = V_sum * 2.24
+
+else if Time >1025 and time <= 1030 then V_est = V_sum * 2.17
+
+else if Time >1030 and time <= 1035 then V_est = V_sum * 2.10
+
+else if Time >1035 and time <= 1040 then V_est = V_sum * 2.05
+
+else if Time >1040 and time <= 1045 then V_est = V_sum * 1.98
+
+else if Time >1045 and time <= 1050 then V_est = V_sum * 1.92
+
+else if Time >1050 and time <= 1055 then V_est = V_sum * 1.88
+
+else if Time >1055 and time <= 1100 then V_est = V_sum * 1.83
+
+else if Time >1100 and time <= 1105 then V_est = V_sum * 1.79
+
+else if Time >1105 and time <= 1110 then V_est = V_sum * 1.75
+
+else if Time >1110 and time <= 1115 then V_est = V_sum * 1.71
+
+else if Time >1115 and time <= 1120 then V_est = V_sum * 1.68
+
+else if Time >1120 and time <= 1125 then V_est = V_sum * 1.63
+
+else if Time >1125 and time <= 1130 then V_est = V_sum * 1.59
+
+else if Time >1130 and time <= 1135 then V_est = V_sum * 1.56
+
+else if Time >1135 and time <= 1140 then V_est = V_sum * 1.53
+
+else if Time >1140 and time <= 1145 then V_est = V_sum * 1.51
+
+else if Time >1145 and time <= 1150 then V_est = V_sum * 1.48
+
+else if Time >1150 and time <= 1155 then V_est = V_sum * 1.45
+
+else if Time >1155 and time <= 1200 then V_est = V_sum * 1.43
+
+else if Time >1200 and time <= 1205 then V_est = V_sum * 1.40
+
+else if Time >1205 and time <= 1210 then V_est = V_sum * 1.38
+
+else if Time >1210 and time <= 1215 then V_est = V_sum * 1.35
+
+else if Time >1215 and time <= 1220 then V_est = V_sum * 1.33
+
+else if Time >1220 and time <= 1225 then V_est = V_sum * 1.31
+
+else if Time >1225 and time <= 1230 then V_est = V_sum * 1.30
+
+else if Time >1230 and time <= 1235 then V_est = V_sum * 1.28
+
+else if Time >1235 and time <= 1240 then V_est = V_sum * 1.26
+
+else if Time >1240 and time <= 1245 then V_est = V_sum * 1.24
+
+else if Time >1245 and time <= 1250 then V_est = V_sum * 1.22
+
+else if Time >1250 and time <= 1255 then V_est = V_sum * 1.21
+
+else if Time >1255 and time <= 1300 then V_est = V_sum * 1.19
+
+else if Time >1300 and time <= 1305 then V_est = V_sum * 1.16
+
+else if Time >1305 and time <= 1310 then V_est = V_sum * 1.15
+
+else if Time >1310 and time <= 1315 then V_est = V_sum * 1.13
+
+else if Time >1315 and time <= 1320 then V_est = V_sum * 1.11
+
+else if Time >1320 and time <= 1325 then V_est = V_sum * 1.09
+
+else if Time >1325 and time <= 1330 then V_est = V_sum * 1.08
+
+else if Time >1330 and time <= 1335 then V_est = V_sum * 1.05
+
+else if Time >1335 and time <= 1340 then V_est = V_sum * 1.03
+
+else if Time >1340 and time <= 1345 then V_est = V_sum * 1.00;
+
+
+
+
+if time = 1345 then TodayVol = V_sum ;
+
+
+
+
+
+
+
+plot1(V_sum, "Daily V sum");
+
+plot2(V_est, "Volume Est");
+
+plot3(YesterDayVol,"LastdayVol");
+
+plot4(YesterDayVol*Ratio, "VolumeRatio");
