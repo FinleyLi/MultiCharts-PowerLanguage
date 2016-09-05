@@ -1,0 +1,29 @@
+{
+http://white5168.blogspot.tw/2016/06/multicharts-excel-8.html#.V8zYlk197IU
+TXF1-UV：台指連續月1外盤量
+TXF1-TB：台指連續月1累計買成筆
+TXF1-TA：台指連續月1累計賣成筆
+TXF1-DV：台指連續月1內盤量
+TXF1-BV：台指連續月1委買量
+TXF1-BO：台指連續月1委買筆
+TXF1-AV：台指連續月1委賣量
+TXF1-AO：台指連續月1委賣筆
+http://wenschair.blogspot.tw/2013/10/by-xdtrader.html
+四種業界主觀交易常用的即時籌碼指標：
+(1) MasterForce主力指標：利用即時委買、委賣量的差值換算出的籌碼動向，這些資訊被解讀為大戶(或主力)的動向，被認為具有領先特性。
+(2) DealtForce成交力差指標：利用即時多空單累計成交量的差值，計算出實際的成交力道，此資訊常被用來判斷行情的確立或是走勢延續。
+(3) SlaveForce散戶指標：利用即時多空委買賣的筆數差值，計算出小單交易的狀況，此資訊常被認為是用來判斷散戶的動態，當行情呈現趨勢盤時，容易與趨勢反向，具有反指標意義；但在量縮盤整的時候，則不一定。
+(4) TWSEForce氣氛指標：利用即時的大盤漲跌家數差值變化，可以看出目前現貨的狀況，如果是強多格局，大盤漲的家數會大勝跌的家數，此時漲勢具有延續性。
+}
+
+value1 = c data2 - c data3;
+plot1(value1, "BV-AV", iff(value1 > 0, red, green));
+
+value1 = c data4 - c data5;
+plot1(value1, "TA-TB", iff(value1 > 0, red, green));
+
+value1 = c data6 - c data7;
+plot1(value1, "BO-AO", iff(value1 > 0, red, green));
+
+value1 = (c data3 / c data5 - c data2 / c data4)*100;
+plot1(value1, "bv/bo-av/ao",iff(value1 > 0, red, green));
