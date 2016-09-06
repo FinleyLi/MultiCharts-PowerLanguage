@@ -1,0 +1,52 @@
+inputs: Length(20), NumDevsUp(2), NumDevsDn(-2);
+vars: AVG(0), UPline(0), DOWNline(0);
+
+AVG = AverageFC( close, Length);
+value1 = StandardDev( close, Length, 1);
+UPline = AVG+NumDevsUp*value1;
+DOWNline = AVG+NumDevsDn*value1;
+value2 = AVG;
+
+condition1 = CountIf( close>open, 3)>=3;
+condition2 = CountIf( close>close[1], 3)>=3;
+condition3 = CountIf( open>open[1], 3)>=3;
+condition4 = open>open[1] and open[1]>open[2] and close>close[1] and close[1]>close[2];
+
+condition5 = CountIf( UPline>Upline[1], 3)>=3;
+if condition1 and condition2 and condition3 and condition4 and condition5 and marketposition=0 then buy next bar at Highest( high, 5) stop;
+
+condition6 = CountIf( close<open, 3)>=3;
+condition7 = CountIf( close<close[1], 3)>=3;
+condition8 = CountIf( open<open[1], 3)>=3;
+condition9 = close<close[1] and close[1]<close[2] and open<open[1]and open[1]<open[2];
+
+condition10 = CountIf( DOWNline<DOWNline[1], 3)>=3;
+if condition6 and condition7 and condition8 and condition9 and condition10 and marketposition=0 then sellshort next bar at lowest( low,5) stop;
+
+
+{
+if marketposition>0 and (open<close) then begin
+sell("EXIT_buy") next bar at market;
+end;
+
+if marketposition<0 and (open>close) then begin
+buytocover("EXIT_sell") next bar at market;
+end;
+}
+setstoploss(10000);
+
+if marketposition =1 then begin
+        sell next bar at entryprice-50 stop ;
+        if time>1310 then sell next bar at lowest(low,3)-1 stop;
+        if time>1335 then sell this bar on close;
+end;
+
+if marketposition =-1 then begin
+        buytocover next bar at entryprice+50 stop ;
+        if Time>1310 then buytocover next bar at highest(high,3)+1 stop;
+        if Time>1335 then buytocover this bar on close;
+end;
+
+setexitonclose;
+{setstoploss(60*bigpointvalue);}
+
