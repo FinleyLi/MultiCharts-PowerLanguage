@@ -1,0 +1,25 @@
+input: Length(10),endTime(1330);
+var: K(1),toBuy(99999),toShort(0);
+
+K= iff( D>D[1], 1, K+1 );
+
+if sessionlastbar then begin
+  tobuy=99999;
+  toshort= 0;
+end;
+if K=Length then begin
+  toBuy=Highest(High,K);
+  toShort=Lowest(Low,K);
+end;
+if K>=Length and T<=endTime then begin
+  if marketposition<=0 then
+    buy next bar toBuy stop;
+
+  if marketposition>=0 then
+    sellshort next bar toShort stop;
+end;
+
+setexitonclose;
+
+setstoploss(25*bigpointvalue);
+
