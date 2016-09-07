@@ -1,0 +1,46 @@
+input:n(9),m(5),xx(70),yy(26);
+
+var:MTM(0),MTMMA(0);
+MTM=close-close[n];
+MTMMA=Average(MTM,m);
+
+if marketposition=0 and  mtm crosses above mtmma and rsi(close,16)>=xx then buy ("bk")next bar market;
+//RSI
+
+if marketposition=0 and  mtm crosses below mtmma and rsi(close,16)<=yy  then sellshort("sk") next bar at market;
+//RSI
+
+
+//////////////////////////////
+input:stoppoint(10);
+var:longstop(0),barHH(0);
+
+if barssinceentry=0 then begin
+longstop=minlist(low,low[1])-stoppoint;
+barHH=high;
+end;
+
+if high>barHH then barHH=high;
+if barssinceentry>0 then begin
+if c>barHH[1] then longstop=minlist(low,low[1])-stoppoint;
+end;
+if marketposition=1 then sell("EL") next bar at longstop stop ;
+//
+
+/////////////////////////////////////////////////////////////
+
+input:stoppoint1(10);
+var:longstop1(0),barll(0);
+
+if barssinceentry=0 then begin
+longstop1=maxlist(high,high[1])+stoppoint;
+barll=low;
+end;
+
+if low<barll then barll=low;
+if barssinceentry>0 then begin
+if c<barll[1] then longstop1=maxlist(high,high[1])+stoppoint;
+end;
+if marketposition=-1 then buytocover("EX") next bar at longstop1 stop ;
+//
+
