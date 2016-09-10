@@ -1,5 +1,5 @@
 # MultiCharts-PowerLanguage
-FinTech
+*【FinTech】
 
 #### 收集網路上公開的程式碼學習筆記與改進作法
 
