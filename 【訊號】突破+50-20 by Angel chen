@@ -1,0 +1,13 @@
+if time=0915 then value1=opend(0);
+
+if time>=0915 and time<1300 then begin
+buy next bar value1+30 stop;
+sellshort next bar value1-30 stop;
+end;
+
+if time>=1300 then begin
+buytocover next bar market;
+sell next bar market;
+end;
+
+setstoploss(40*bigpointvalue);
