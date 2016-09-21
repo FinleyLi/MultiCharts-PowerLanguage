@@ -1,0 +1,40 @@
+inputs: N(12);
+vars: kh(0), k1(0), Kbar(0), buyexit(0);
+
+if date<>date[1] then begin
+  value1 = barnumber;
+end;
+
+Kbar = barnumber-value1+1;
+if Kbar=N then begin
+  kh = highest(high,N);
+end;
+
+//可以改成STOP進單
+if Kbar>N then begin
+  if close crosses above kh and k1<1 then begin
+    buy next bar at market;
+    //---red word
+    buyexit = lowest(low,2);
+    //---
+  end;
+  //k1 限制一天要做幾次，k1<1買單只做一次。
+end;
+
+//---red word
+if highest(high,barsSinceEntry(0)) > highest(high,barsSinceEntry(0))[1] then
+  buyesit = lowest(low,2);
+//---
+//利用barsSiceEntry來看進場後是否有創新高，如果有把buyexit值用當根及前一根低點比較，最低的丟進去。
+
+//出場也可以改成sell next bar at buyexit stop;
+if marketposition>0 and close<buyexit then begin
+  sell next bar at market;
+  k1 = K1+1;
+end;
+
+if Kbar>55 then begin
+  sell next bar at market;
+  k1 = 0;
+  kh = 99999;
+end;
