@@ -1,0 +1,37 @@
+inputs:
+	avg_length( 20 ),
+	X_Length( 20 ),slop_or_angle(1);
+
+variables:var0( 0 ),var1(0),var2(0),var3(0),a1(0) ;
+
+a1=Average(close,avg_length);
+
+condition1 =  CurrentBar > AbsValue( 0) ;
+
+if condition1 then 
+Value1 = LinearReg( a1, X_Length, 0, var0, var1, var2, var3 ) ;
+
+
+switch(slop_or_angle) begin
+
+case 0:
+	
+Plot1( var0);
+
+If var0> 0 then SetPlotColor(1,red)
+else
+SetPlotColor(1,green);
+
+case 1:
+
+Plot1( var1);
+If var1> 0 then SetPlotColor(1,red)
+else
+SetPlotColor(1,green);
+
+end;
+ 
+ 
+ 
+ 
+
