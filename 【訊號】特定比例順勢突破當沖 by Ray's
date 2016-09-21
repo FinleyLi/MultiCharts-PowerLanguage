@@ -20,7 +20,7 @@ if marketposition<0 then begin
   k2 = 1;
 end;
 if marketposition>0 then begin
-  sell("Stop_loss_long") next bar at entryprice*(1+0.005) stop;
+  sell("Stop_loss_long") next bar at entryprice*(1-0.005) stop;
   k1 = 1;
 end;
 //
