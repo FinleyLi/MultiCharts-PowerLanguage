@@ -38,3 +38,21 @@ if Kbar>55 then begin
   k1 = 0;
   kh = 99999;
 end;
+
+//使用陣列改善效能
+{
+if (high>currenthighvalue)
+begin
+  high = currenthighvalue
+  buyexit = lowest(low,2)
+end
+
+if Kbar>N then begin
+  if close crosses above kh and k1<1 then begin
+    buy next bar at market;
+    currenthighvalue = high
+    buyexit = lowest(low,2);
+  end;
+  //k1 限制一天要做幾次，k1<1買單只做一次。
+end;
+}
