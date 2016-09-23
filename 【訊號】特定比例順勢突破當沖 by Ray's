@@ -7,14 +7,14 @@ end;
 condition1 = highd(0)>=open(0)*(1+F);
 condition2 = (high=highd(0) and high>=opend(0)*(1+F)) or high<highd(0);
 condition3 = lowd(0)<=opend(0)*(1-F);
-condition4 = (low=lowd(0) and low<=opend(0)*(1-F) or low>lowd(0);
+condition4 = (low=lowd(0) and low<=opend(0)*(1-F)) or low>lowd(0);
 
 if marketposition=0 and k1=0 and time>0900 and time<=1300 and condition1 and condition3 then
   buy("b") next bar at highd(0) stop;
-if matketposition=0 and k2=0 and time>0900 and time<=1300 adn condition2 and condition4 then
+if marketposition=0 and k2=0 and time>0900 and time<=1300 and condition2 and condition4 then
   sellshort("s") next bar at lowd(0) stop;
   
-//停損進場價0.5%
+//?????0.5%
 if marketposition<0 then begin
   buytocover("Stop_loss_short") next bar at entryprice*(1+0.005) stop;
   k2 = 1;
@@ -25,7 +25,7 @@ if marketposition>0 then begin
 end;
 //
 
-//沒停損收盤平倉
+//???????
 if time>=1325 then begin
   sell next bar at market;
   buytocover next bar at market;
