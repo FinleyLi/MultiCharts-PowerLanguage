@@ -23,7 +23,7 @@ end;
 
 //---red word
 if highest(high,barsSinceEntry(0)) > highest(high,barsSinceEntry(0))[1] then
-  buyesit = lowest(low,2);
+  buyexit = lowest(low,2);
 //---
 //利用barsSiceEntry來看進場後是否有創新高，如果有把buyexit值用當根及前一根低點比較，最低的丟進去。
 
