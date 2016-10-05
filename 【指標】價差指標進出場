@@ -1,0 +1,42 @@
+//計算不同商品價差(3分鐘線)
+inputs: DataSeries1( Close of data1), DataSeries2( Close of data2);
+Plot1( DataSeries1 - DataSeries2, "SprdDiff" );
+
+if DataSeries2 <> 0 then Plot1( DataSeries1/DataSeries2, "SprdRatio" );
+
+//正價差作多，逆價差作空
+diff=close of Data1 - close of Data2;
+if diff cross over 0 then buy next bar ar market;
+if diff cross under 0 then sellshort next var at market;
+
+//正價差作空，逆價差作多
+diff=close of Data1 - close of Data2;
+if diff cross under 0 then buy next bar ar market;
+if diff cross over 0 then sellshort next var at market;
+
+
+
+//小時線，逆價差突破高點買進，正價差突破低點賣出，停損停利
+//正逆價差交易
+
+input: SL(0.0125), PL(0.03), rr(0.4), aa(-40), bb(20);
+value1 = close of data1 - close of data2;//計算期貨和現貨的價差值
+if H-L>0 then begin
+condition1 = (C-L)/(H-L)>rr and C>O and C[1]>O[1];//重要的濾網
+condition2 = (C-L)/(H-L)<1-rr and C<O and C[1]<O[1];
+end;
+if t>0915 and t<1324 then begin
+if condition1 and value1 cross over aa then buy next bar at market;//逆價差縮小買進多單
+if condition2 and value1 cross under bb then sellshort next bar at market;//正價差所小買進空單
+end;
+//停損停利
+if marketposition=1 then sell next bar entryprice*(1-SL) stop;
+if marketposition=-1 then buytocover next bar at entryprice*(1+SL) stop;
+if marketposition=1 then sell next bar at entryprice*(1+PL) limit;
+if marketposition=-1 then buytocover next bar at entryprice*(1-PL) limit;
+//結算日平倉
+if marketposition<>0 and dayofweek(date)=3 and dayofmonth(date)>14 and dayofmonth(date)<22 then begin
+sell all contracts this bar on close;
+buytocover all contracts this bar on close;
+end;
+
